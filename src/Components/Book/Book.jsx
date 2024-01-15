@@ -1,15 +1,15 @@
 import { useState } from "react";
-import img from "../../assets/book.png";
+
 import { FaStar } from "react-icons/fa";
 export default function Book({ book }) {
-  const { title, author, rating, price, publicationYear } = book;
+  const { title, author, rating, price, publicationYear, img } = book;
   const [favourite, setFavourite] = useState(false);
   let stars = new Array(rating).fill("rating");
-  console.log(stars);
+
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4">
-        <img className="max-w-[144px]" src={img} alt="book name" />
+        <img className="max-w-[180px] h-[180px]" src={img} alt="book name" />
       </div>
 
       <div className="space-y-3">

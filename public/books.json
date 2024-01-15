@@ -5,7 +5,8 @@
       "author": "John Doe",
       "rating": 4,
       "price": "$40",
-      "publicationYear": 2020
+      "publicationYear": 2020,
+"img":"https://book2action-5d2aff0.divio-media.net/filer_public/43/8d/438dcb59-ed0a-4513-93a7-10e05f6f1528/the_mastery_code.png"
   },
   {
       "id": "9i10j11k12l13m",
@@ -13,7 +14,8 @@
       "author": "Kyle Simpson",
       "rating": 5,
       "price": "$35",
-      "publicationYear": 2018
+      "publicationYear": 2018,
+      "img":"https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
       "id": "14n15o16p17q18r",
@@ -21,15 +23,17 @@
       "author": "Robert C. Martin",
       "rating": 5,
       "price": "$50",
-      "publicationYear": 2008
+      "publicationYear": 2008,
+      "img":"https://milspousecoders.org/wp-content/uploads/2020/02/Screen-Shot-2020-02-02-at-9.41.42-AM.png"
   },
   {
       "id": "19s20t21u22v23w",
-      "title": "Coding Craftsmanship",
-      "author": "Jane Smith",
+      "title": "Code Book",
+      "author": "Simon Sigh",
       "rating": 4,
       "price": "$55",
-      "publicationYear": 2015
+      "publicationYear": 2015,
+      "img":"https://mathsgear.co.uk/cdn/shop/products/Codebook_87cf147e-ed5a-451e-aca1-d17f3f4e3cd4.jpg?v=1498728336"
   },
   {
       "id": "24x25y26z27a28b",
@@ -37,7 +41,8 @@
       "author": "Gang of Four",
       "rating": 4,
       "price": "$60",
-      "publicationYear": 1994
+      "publicationYear": 1994,
+      "img":"https://m.media-amazon.com/images/I/81-k55ERXxL._AC_UF1000,1000_QL80_.jpg"
   },
   {
       "id": "29c30d31e32f33g",
@@ -45,15 +50,17 @@
       "author": "Andrew Hunt, David Thomas",
       "rating": 5,
       "price": "$45",
-      "publicationYear": 1999
+      "publicationYear": 1999,
+      "img":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1401432508i/4099.jpg"
   },
   {
       "id": "34h35i36j37k38l",
-      "title": "JS Essentials",
-      "author": "Alex Johnson",
+      "title": "Node JS Essentials",
+      "author": "Adnan Babakan",
       "rating": 4,
       "price": "$38",
-      "publicationYear": 2016
+      "publicationYear": 2016,
+      "img":"https://res.cloudinary.com/practicaldev/image/fetch/s--LMBF3mgj--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/axa9a7rvgggo2pa2d3vz.png"
   },
   {
       "id": "39m40n41o42p43q",
@@ -61,110 +68,7 @@
       "author": "Eric Freeman, Elisabeth Robson",
       "rating": 5,
       "price": "$42",
-      "publicationYear": 2012
-  },
-  {
-      "id": "44r45s46t47u48v",
-      "title": "Clean Coder",
-      "author": "Robert C. Martin",
-      "rating": 4,
-      "price": "$48",
-      "publicationYear": 2011
-  },
-  {
-      "id": "49w50x51y52z53a",
-      "title": "Code Refactoring",
-      "author": "Martin Fowler",
-      "rating": 5,
-      "price": "$55",
-      "publicationYear": 2009
-  },
-  {
-      "id": "54b55c56d57e58f",
-      "title": "Web Development",
-      "author": "Samantha Brown",
-      "rating": 4,
-      "price": "$38",
-      "publicationYear": 2017
-  },
-  {
-      "id": "59g60h61i62j63k",
-      "title": "Python Mastery",
-      "author": "Michael Smith",
-      "rating": 5,
-      "price": "$45",
-      "publicationYear": 2020
-  },
-  {
-      "id": "64l65m66n67o68p",
-      "title": "AI Essentials",
-      "author": "Emily White",
-      "rating": 4,
-      "price": "$50",
-      "publicationYear": 2019
-  },
-  {
-      "id": "69q70r71s72t73u",
-      "title": "Mobile App Design",
-      "author": "Chris Johnson",
-      "rating": 3,
-      "price": "$30",
-      "publicationYear": 2014
-  },
-  {
-      "id": "74v75w76x77y78z",
-      "title": "Data Science",
-      "author": "Daniel Lee",
-      "rating": 5,
-      "price": "$55",
-      "publicationYear": 2013
-  },
-  {
-      "id": "79a80b81c82d83e",
-      "title": "DevOps Basics",
-      "author": "Megan Adams",
-      "rating": 4,
-      "price": "$42",
-      "publicationYear": 2016
-  },
-  {
-      "id": "84f85g86h87i88j",
-      "title": "Cloud Computing",
-      "author": "David Miller",
-      "rating": 5,
-      "price": "$48",
-      "publicationYear": 2015
-  },
-  {
-      "id": "89k90l91m92n93o",
-      "title": "Cybersecurity Fundamentals",
-      "author": "Sophia Davis",
-      "rating": 4,
-      "price": "$40",
-      "publicationYear": 2017
-  },
-  {
-      "id": "94p95q96r97s98t",
-      "title": "Mobile Game Development",
-      "author": "Brian Evans",
-      "rating": 4,
-      "price": "$45",
-      "publicationYear": 2018
-  },
-  {
-      "id": "99u100v101w102x103y",
-      "title": "Agile Practices",
-      "author": "Karen Wilson",
-      "rating": 5,
-      "price": "$50",
-      "publicationYear": 2019
-  },
-  {
-      "id": "104z105a106b107c108d",
-      "title": "Full Stack Development",
-      "author": "Tom Clark",
-      "rating": 4,
-      "price": "$60",
-      "publicationYear": 2022
+      "publicationYear": 2012,
+    "img":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1368812403i/17912853.jpg"
   }
 ]
