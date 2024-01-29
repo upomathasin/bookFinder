@@ -1,24 +1,34 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Book from "../Book/Book";
+import { BookContext } from "../../context/BookContext";
 
 export default function Books() {
-  const [books, setBooks] = useState([]);
-  const [searchedBook, setSearchedBook] = useState(null);
+  const { books, setSearchedBook, searchedBook, setBooks } =
+    useContext(BookContext);
 
-  useEffect(() => {
-    fetch("/books.json")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
+  const handleFavourite = (book) => {
+    const newBooks = books.map((b) => {
+      if (b.id === book.id) {
+        return { ...b, favourite: !b.favourite };
+      } else return b;
+    });
+
+    setBooks(newBooks);
+  };
+  const handleAddToCart = (book) => {
+    const newBooks = books.map((b) => {
+      if (b.id === book.id) {
+        return { ...b, cart: !b.cart };
+      } else return b;
+    });
+
+    setBooks(newBooks);
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
     let searchedValue = e.target.search.value.toLowerCase();
-
-    let booksSearched = books.filter((book) =>
-      book.title.toLowerCase().includes(searchedValue)
-    );
-    setSearchedBook(booksSearched);
+    setSearchedBook(searchedValue);
   };
 
   const handleSortChange = (e) => {
@@ -26,29 +36,29 @@ export default function Books() {
     if (e.target.value == "name_asc") {
       let booksTemp = [...books];
       let sortedArr = booksTemp.sort((a, b) => {
-        if (a.title.toLowerCase() < b.title.toLowerCase()) {
+        if (a.title < b.title) {
           return -1;
-        } else if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        } else if (a.title > b.title) {
           return 1;
         } else {
           return 0;
         }
       });
 
-      setSearchedBook(sortedArr);
+      setBooks(sortedArr);
     } else if (e.target.value == "name_desc") {
       let booksTemp = [...books];
       let sortedArr = booksTemp.sort((a, b) => {
-        if (a.title.toLowerCase() < b.title.toLowerCase()) {
+        if (a.title < b.title) {
           return 1;
-        } else if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        } else if (a.title > b.title) {
           return -1;
         } else {
           return 0;
         }
       });
 
-      setSearchedBook(sortedArr);
+      setBooks(sortedArr);
     }
     // sorting oldest
     else if (e.target.value == "year_asc") {
@@ -63,7 +73,7 @@ export default function Books() {
         }
       });
 
-      setSearchedBook(sortedArr);
+      setBooks(sortedArr);
     }
     //sorting newest
     else if (e.target.value == "year_desc") {
@@ -78,7 +88,7 @@ export default function Books() {
         }
       });
 
-      setSearchedBook(sortedArr);
+      setBooks(sortedArr);
     }
   };
 
@@ -92,11 +102,12 @@ export default function Books() {
               Trending Books of the Year
             </h2>
 
-            <form onSubmit={handleSearch}>
+            <form>
               <div className="flex">
                 <div className="relative w-full overflow-hidden rounded-lg border-2 border-[#1C4336] text-[#1C4336] md:min-w-[380px] lg:min-w-[440px]">
                   <input
                     type="search"
+                    onChange={(e) => setSearchedBook(e.target.value)}
                     name="search"
                     id="search-dropdown"
                     className="z-20 block w-full bg-white px-4 py-2.5 pr-10 text-[#1C4336] placeholder:text-[#1C4336] focus:outline-none"
@@ -149,9 +160,15 @@ export default function Books() {
       </header>
 
       <div className="container mx-auto grid grid-cols-1 gap-8 max-w-7xl md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {searchedBook
-          ? searchedBook.map((book) => <Book key={book.id} book={book} />)
-          : books.map((book) => <Book key={book.id} book={book} />)}
+        {books
+          .filter((book) => book.title.toLowerCase().includes(searchedBook))
+          .map((book) => (
+            <Book
+              book={book}
+              handleAddToCart={handleAddToCart}
+              handleFavourite={handleFavourite}
+            />
+          ))}
       </div>
     </main>
   );

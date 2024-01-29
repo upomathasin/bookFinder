@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { FaStar } from "react-icons/fa";
-export default function Book({ book }) {
+import { BookContext } from "../../context/BookContext";
+export default function Book({ book, handleAddToCart, handleFavourite }) {
   const { title, author, rating, price, publicationYear, img } = book;
-  const [favourite, setFavourite] = useState(false);
+
   let stars = new Array(rating).fill("rating");
 
   return (
@@ -31,7 +32,14 @@ export default function Book({ book }) {
         </div>
 
         <div className="flex items-center gap-3 text-xs lg:text-sm">
-          <button className="flex min-w-[132px] items-center justify-center gap-1 rounded-md bg-[#1C4336] py-1.5 text-white transition-all hover:opacity-80 lg:py-1.5">
+          <button
+            onClick={() => handleAddToCart(book)}
+            className={`flex min-w-[132px] items-center justify-center gap-1 rounded-md ${
+              book.cart
+                ? "bg-[#1C4336] py-1.5 text-white transition-all hover:opacity-80 lg:py-1.5"
+                : "bg-[#1C4336]/[14%] py-1.5 text-[#1C4336] transition-all hover:bg-[#1C4336]/[24%] lg:py-1.5"
+            }`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -49,19 +57,19 @@ export default function Book({ book }) {
             Add to Cart
           </button>
           <button
-            onClick={() => setFavourite(!favourite)}
+            onClick={() => handleFavourite(book)}
             className={`flex min-w-[132px] items-center justify-center gap-1 rounded-md    ${
-              favourite
+              book.favourite
                 ? "bg-[#DC2954]/[14%] py-1.5 text-[#DC2954] transition-all hover:bg-[#DC2954]/[24%] lg:py-1.5"
                 : "bg-[#1C4336]/[14%] py-1.5 text-[#1C4336] transition-all hover:bg-[#1C4336]/[24%] lg:py-1.5"
             }  `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill={favourite ? "#DC2954" : "none"}
+              fill={book.favourite ? "#DC2954" : "none"}
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={favourite ? "#DC2954" : "currentColor"}
+              stroke={book.favourite ? "#DC2954" : "currentColor"}
               className="h-5 w-5"
             >
               <path

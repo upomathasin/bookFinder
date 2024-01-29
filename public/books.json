@@ -1,74 +1,82 @@
 [
-  {
-      "id": "1a2b3c4d5e6f7g8h",
+    {
+      "id": "1a2b3c4d5e6fk7g8h",
       "title": "Code Mastery",
       "author": "John Doe",
       "rating": 4,
       "price": "$40",
       "publicationYear": 2020,
-"img":"https://book2action-5d2aff0.divio-media.net/filer_public/43/8d/438dcb59-ed0a-4513-93a7-10e05f6f1528/the_mastery_code.png"
-  },
-  {
-      "id": "9i10j11k12l13m",
+      "img": "https://book2action-5d2aff0.divio-media.net/filer_public/43/8d/438dcb59-ed0a-4513-93a7-10e05f6f1528/the_mastery_code.png",
+      "favourite": false
+    },
+    {
+      "id": "9i10j11k12l13llm",
       "title": "JavaScript Ninja",
       "author": "Kyle Simpson",
       "rating": 5,
       "price": "$35",
       "publicationYear": 2018,
-      "img":"https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
+      "img": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "favourite": false
+    },
+    {
       "id": "14n15o16p17q18r",
       "title": "Clean Code",
       "author": "Robert C. Martin",
       "rating": 5,
       "price": "$50",
       "publicationYear": 2008,
-      "img":"https://milspousecoders.org/wp-content/uploads/2020/02/Screen-Shot-2020-02-02-at-9.41.42-AM.png"
-  },
-  {
+      "img": "https://milspousecoders.org/wp-content/uploads/2020/02/Screen-Shot-2020-02-02-at-9.41.42-AM.png"
+    },
+    {
       "id": "19s20t21u22v23w",
       "title": "Code Book",
       "author": "Simon Sigh",
       "rating": 4,
       "price": "$55",
       "publicationYear": 2015,
-      "img":"https://mathsgear.co.uk/cdn/shop/products/Codebook_87cf147e-ed5a-451e-aca1-d17f3f4e3cd4.jpg?v=1498728336"
-  },
-  {
+      "img": "https://mathsgear.co.uk/cdn/shop/products/Codebook_87cf147e-ed5a-451e-aca1-d17f3f4e3cd4.jpg?v=1498728336",
+      "favourite": false
+    },
+    {
       "id": "24x25y26z27a28b",
       "title": "Design Patterns",
       "author": "Gang of Four",
       "rating": 4,
       "price": "$60",
       "publicationYear": 1994,
-      "img":"https://m.media-amazon.com/images/I/81-k55ERXxL._AC_UF1000,1000_QL80_.jpg"
-  },
-  {
+      "img": "https://m.media-amazon.com/images/I/81-k55ERXxL._AC_UF1000,1000_QL80_.jpg",
+      "favourite": false
+    },
+    {
       "id": "29c30d31e32f33g",
       "title": "Pragmatic Programmer",
       "author": "Andrew Hunt, David Thomas",
       "rating": 5,
       "price": "$45",
       "publicationYear": 1999,
-      "img":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1401432508i/4099.jpg"
-  },
-  {
+      "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1401432508i/4099.jpg",
+      "favourite": true
+    },
+    {
       "id": "34h35i36j37k38l",
       "title": "Node JS Essentials",
       "author": "Adnan Babakan",
       "rating": 4,
       "price": "$38",
       "publicationYear": 2016,
-      "img":"https://res.cloudinary.com/practicaldev/image/fetch/s--LMBF3mgj--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/axa9a7rvgggo2pa2d3vz.png"
-  },
-  {
+      "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--LMBF3mgj--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/axa9a7rvgggo2pa2d3vz.png",
+      "favourite": false
+    },
+    {
       "id": "39m40n41o42p43q",
       "title": "Head First JS",
       "author": "Eric Freeman, Elisabeth Robson",
       "rating": 5,
       "price": "$42",
       "publicationYear": 2012,
-    "img":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1368812403i/17912853.jpg"
-  }
-]
+      "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1368812403i/17912853.jpg",
+      "favourite": true
+    }
+  ]
+  
